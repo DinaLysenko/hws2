@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Affairs from './affairs/Affairs'
 import s2 from '../../s1-main/App.module.css'
-import affair from "./affairs/affair/Affair";
+import Affair from "./affairs/affair/Affair";
 
 /*
 * 1 - описать типы AffairPriorityType, AffairType
@@ -38,7 +38,7 @@ const defaultAffairs: AffairType[] = [ // need to fix any
 // pure helper functions
 export const filterAffairs = (affairs: AffairType[], filter: FilterType): AffairType[] => { // need to fix any
     if (filter === "all") return affairs
-    return affairs.filter(e => e.priority == filter)
+    return affairs.filter(e => e.priority === filter)
 }
 export const deleteAffair = (affairs: AffairType[], _id: number): AffairType[] => { // need to fix any
     return affairs.filter(e => e._id !== _id)
